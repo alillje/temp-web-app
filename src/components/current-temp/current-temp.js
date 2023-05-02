@@ -8,6 +8,7 @@ import './current-temp.css'
  */
 const CurrentTemp = () => {
   const [temp, setTemp] = useState(0)
+  const [humidity, setHumidity] = useState(0)
   const [datetime, setDateTime] = useState('')
   useEffect(() => {
     /**
@@ -16,6 +17,7 @@ const CurrentTemp = () => {
     const getTempData = async () => {
       const data = await getLatestTempdata()
       setTemp(data?.temperature)
+      setHumidity(data?.humidity)
       console.log(data)
       const datetime = dayjs(data?.timestamp)
       const formattedDatetime = datetime.format('MMMM D, YYYY, HH:mm')
@@ -29,9 +31,12 @@ const CurrentTemp = () => {
 
   return (
     <div className="current-temp-container">
-      <h1>Current Temperature</h1>
+      <h1>Temperature</h1>
       <div className="temperature">{temp}°c</div>
-      <div className="time">Last measure at: {datetime}</div>
+      <h2>Humidity</h2>
+      <div className="humidity">{humidity}%</div>
+      <div className="time">Latest at {datetime}</div>
+
     </div>
   )
 }

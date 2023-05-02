@@ -13,7 +13,7 @@ import * as React from 'react'
 const Layout = ({ main, bottom }) => {
   return (
      <div className="layoutContainer">
-                <div className="layoutTop">JAKTSTIGEN 6
+                <div className="layoutTop">Jaktstigen 6
                 </div>
                 <div className="layoutMain" >
                 {main}
