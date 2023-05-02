@@ -1,0 +1,21 @@
+.hour-average {
+    background-color: inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Jost-Regular;
+
+}
+
+
+.hour-average h1 {
+    padding: 0px 30px 0px 30px;
+    text-align: center;
+    font-size: 2rem;
+    line-height: 40px;
+    font-weight: 200;
+    color: #878787;
+}
+
+
