@@ -18,7 +18,6 @@ export const getLatestTempdata = async () => {
   }
   try {
     const response = await fetch(url, { headers })
-    console.log(response)
     const json = await response.json()
     if (response.ok) {
       return json
