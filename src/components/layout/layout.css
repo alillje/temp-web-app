@@ -1,0 +1,44 @@
+.layoutContainer {
+    background-color: inherit;
+    width: 100vw;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 10vw auto 10vw;
+    grid-template-rows: 170px min-content auto;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    color: #ffffff;
+    overflow-x: hidden;
+    padding-bottom: 200px;
+    margin: 0;
+  }
+  
+  .layoutTop {
+    grid-area: 1 / 1 / 2 / 4;
+    background-color: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    font-family: Poppins-Regular;
+    border-bottom: 1px solid rgba(35, 183, 196, 0.088);
+    margin-bottom: 50px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  }
+  
+  
+  .layoutMain {
+    grid-area: 2 / 2 / 3 / 3;
+    overflow-x: hidden;
+    height: min-content;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  
+  .layoutBottom {
+    grid-area: 3 / 2 / 4 / 3;
+  }
+  

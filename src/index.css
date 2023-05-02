@@ -5,9 +5,44 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #161616;
+  
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+p {
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: "Jost-Regular";
+  src: local("Jost-Regular"), url(./fonts/Jost-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Jost-Bold";
+  src: local("Jost-Bold"), url(./fonts/Jost-Bold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Poppins-Regular";
+  src: local("Poppins-Regular"), url(./fonts/Poppins-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Poppins-Bold";
+  src: local("Poppins-Bold"), url(./fonts/Poppins-Bold.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Poppins-Semi-Bold";
+  src: local("Poppins-Semi-Bold"), url(./fonts/Poppins-SemiBold.ttf) format("truetype");
+}
+
+.wrapper {
+  height: calc(100vh);
+  background: linear-gradient(167.95deg, #1C1E32 0%, #0B0C18 100%);;
+  color: '#ffffff';
+  font-family: "Jost";
+  overflow-x: hidden;
 }
