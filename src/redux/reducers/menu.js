@@ -20,11 +20,11 @@ export const menuSlice = createSlice({
      * @param {object} state - Redux state object.
      * @param {object} action - Object containing the different state values to be set.
      */
-    toggleSideBar: (state, action) => {
+    toggleMenu: (state, action) => {
       state.show = action.payload.show
     }
   }
 })
 
-export const { toggleSideBar } = menuSlice.actions
+export const { toggleMenu } = menuSlice.actions
 export default menuSlice.reducer

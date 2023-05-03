@@ -2,6 +2,8 @@ import './layout.css'
 import * as React from 'react'
 import MenuIcon from './img/MenuIcon.svg'
 import { useState, useEffect } from 'react'
+import { useSelector, useDispatch } from 'react-redux'
+import { toggleMenu } from '../../redux/reducers/menu.js'
 import NavMenu from '../nav-menu/nav-menu.js'
 
 /**
@@ -14,20 +16,29 @@ import NavMenu from '../nav-menu/nav-menu.js'
  * @returns {React.ReactElement} - Layout Component.
  */
 const Layout = ({ main, bottom }) => {
-  const [showMenu, setShowMenu] = useState(false)
+  const dispatch = useDispatch()
+  const showMenu = useSelector((state) => state.menu.show)
 
-  const toggleMenu = () => {
-    setShowMenu(!showMenu)
+  /**
+   * Hides the sidebar.
+   */
+  const ShowMenu = () => {
+    dispatch(
+      toggleMenu({
+        show: true
+      })
+    )
+    console.log(showMenu)
   }
   useEffect(() => {}, [showMenu])
 
   if (showMenu) {
-    <NavMenu />
+    return <NavMenu />
   } else {
     return (
      <div className="layoutContainer">
                 <div className="layoutTop"><div className="layout-title">Jaktstigen 6</div>
-                <div className="layout-menu-button-container"><img onClick={(e) => toggleMenu(e)} src={MenuIcon} alt="MenuIcon" className="menuIcon"></img></div>
+                <div className="layout-menu-button-container"><img onClick={ShowMenu} src={MenuIcon} alt="MenuIcon" className="menuIcon"></img></div>
                 </div>
                 <div className="layoutMain" >
                 {main}

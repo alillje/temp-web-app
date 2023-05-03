@@ -1,6 +1,3 @@
-import { useEffect, useState } from 'react'
-import { getLatestTempdata } from '../../services/fetch-service'
-import dayjs from 'dayjs'
 import './loading-spinner.css'
 
 /**
