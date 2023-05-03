@@ -33,6 +33,7 @@
 
   .layout-title {
     grid-area: 1 / 2 / 2 / 6;
+    text-align: center;
   }
   .layout-menu-button-container {
     grid-area: 1 / 6 / 2 / 7;
