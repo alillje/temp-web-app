@@ -29,6 +29,7 @@
     font-family: Poppins-Regular;
     color: #c2c2c2b7;
     position: fixed;
+    pointer-events: all;;
   }
 
   .layout-title {
@@ -38,6 +39,10 @@
   .layout-menu-button-container {
     grid-area: 1 / 6 / 2 / 7;
 
+  }
+
+  .layout-menu-button-container img {
+    cursor: pointer;
   }
   
   .layoutMain {

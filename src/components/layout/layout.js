@@ -1,6 +1,8 @@
 import './layout.css'
 import * as React from 'react'
 import MenuIcon from './img/MenuIcon.svg'
+import { useState, useEffect } from 'react'
+import NavMenu from '../nav-menu/nav-menu.js'
 
 /**
  * Layout Component.
@@ -12,10 +14,20 @@ import MenuIcon from './img/MenuIcon.svg'
  * @returns {React.ReactElement} - Layout Component.
  */
 const Layout = ({ main, bottom }) => {
-  return (
+  const [showMenu, setShowMenu] = useState(false)
+
+  const toggleMenu = () => {
+    setShowMenu(!showMenu)
+  }
+  useEffect(() => {}, [showMenu])
+
+  if (showMenu) {
+    <NavMenu />
+  } else {
+    return (
      <div className="layoutContainer">
                 <div className="layoutTop"><div className="layout-title">Jaktstigen 6</div>
-                <div className="layout-menu-button-container"><img src={MenuIcon} alt="MenuIcon" className="menuIcon"></img></div>
+                <div className="layout-menu-button-container"><img onClick={(e) => toggleMenu(e)} src={MenuIcon} alt="MenuIcon" className="menuIcon"></img></div>
                 </div>
                 <div className="layoutMain" >
                 {main}
@@ -24,7 +36,8 @@ const Layout = ({ main, bottom }) => {
                     {bottom}
                 </div>
     </div>
-  )
+    )
+  }
 }
 
 export default Layout
