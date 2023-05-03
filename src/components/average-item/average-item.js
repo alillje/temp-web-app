@@ -1,12 +1,12 @@
 import { useEffect, useState } from 'react'
 import { getHourlyAverage } from '../../services/fetch-service'
 import dayjs from 'dayjs'
-import './hour-average-item.css'
+import './average-item.css'
 
 /**
- * HourAverageItem Component.
+ * AverageItem Component.
  */
-const HourAverageItem = ({ temperature = 23.3, datetime = '2023-05-02T19:00:00Z' }) => {
+const AverageItem = ({ temperature = 23.3, datetime = '2023-05-02T19:00:00Z' }) => {
   const time = dayjs(datetime)
 
   return (
@@ -18,4 +18,4 @@ const HourAverageItem = ({ temperature = 23.3, datetime = '2023-05-02T19:00:00Z'
   )
 }
 
-export default HourAverageItem
+export default AverageItem

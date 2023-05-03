@@ -47,3 +47,23 @@ export const getHourlyAverage = async () => {
     throw new Error(`Unable to retrieve hour average data. ${e.message}`)
   }
 }
+/**
+ * Gets daily average.
+ *
+ * @returns {object} - The recieved json data object.
+ */
+export const getDailyAverage = async () => {
+  const url = `${process.env.REACT_APP_API_URL}/tempdata/day-average`
+  const headers = {
+    'X-Api-Key': process.env.REACT_APP_API_KEY
+  }
+  try {
+    const response = await fetch(url, { headers })
+    const json = await response.json()
+    if (response.ok) {
+      return json
+    }
+  } catch (e) {
+    throw new Error(`Unable to retrieve hour average data. ${e.message}`)
+  }
+}
