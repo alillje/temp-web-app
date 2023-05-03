@@ -1,5 +1,6 @@
 import './layout.css'
 import * as React from 'react'
+import MenuIcon from './img/MenuIcon.svg'
 
 /**
  * Layout Component.
@@ -13,7 +14,8 @@ import * as React from 'react'
 const Layout = ({ main, bottom }) => {
   return (
      <div className="layoutContainer">
-                <div className="layoutTop">Jaktstigen 6
+                <div className="layoutTop"><div className="layout-title">Jaktstigen 6</div>
+                <div className="layout-menu-button-container"><img src={MenuIcon} alt="MenuIcon" className="menuIcon"></img></div>
                 </div>
                 <div className="layoutMain" >
                 {main}
