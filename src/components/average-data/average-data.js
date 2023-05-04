@@ -52,7 +52,6 @@ const AverageData = ({ hourly = true }) => {
   }, [])
 
   useEffect(() => {
-    console.log(periodAverage)
   }, [periodAverage])
 
   return (

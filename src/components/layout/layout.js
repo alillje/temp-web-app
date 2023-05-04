@@ -28,7 +28,6 @@ const Layout = ({ main, bottom }) => {
         show: true
       })
     )
-    console.log(showMenu)
   }
   useEffect(() => {}, [showMenu])
 

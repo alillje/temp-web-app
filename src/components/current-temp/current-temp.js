@@ -21,7 +21,6 @@ const CurrentTemp = () => {
       const data = await getLatestTempdata()
       setTemp(data?.temperature)
       setHumidity(data?.humidity)
-      console.log(data)
       const datetime = dayjs(data?.timestamp)
       const formattedDatetime = datetime.format('MMMM D, YYYY, HH:mm')
       setDateTime(formattedDatetime)

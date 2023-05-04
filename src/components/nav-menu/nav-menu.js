@@ -15,7 +15,6 @@ const NavMenu = () => {
   // const showMenu = useSelector((state) => state.menu.show)
 
   useEffect(() => {
-    console.log('NavMenu')
   }, [])
 
   /**
