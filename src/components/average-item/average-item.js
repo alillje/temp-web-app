@@ -1,14 +1,17 @@
-import { useEffect, useState } from 'react'
-import { getHourlyAverage } from '../../services/fetch-service'
+import utc from 'dayjs-plugin-utc'
+import timezone from 'dayjs-plugin-timezone'
 import dayjs from 'dayjs'
 import './average-item.css'
+
+// Extend dayjs with plugins
+dayjs.extend(utc)
+dayjs.extend(timezone)
 
 /**
  * AverageItem Component.
  */
 const AverageItem = ({ temperature = 23.3, datetime = '2023-05-02T19:00:00Z', hour = true }) => {
-  const time = dayjs(datetime)
-  time.setDefault('Stockholm')
+  const time = dayjs(datetime).tz('Europe/Stockholm')
   console.log(datetime)
   return (
     <div className="hour-average-item">
