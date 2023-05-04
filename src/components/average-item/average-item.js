@@ -8,6 +8,7 @@ import './average-item.css'
  */
 const AverageItem = ({ temperature = 23.3, datetime = '2023-05-02T19:00:00Z', hour = true }) => {
   const time = dayjs(datetime)
+  time.setDefault('Stockholm')
   console.log(datetime)
   return (
     <div className="hour-average-item">
