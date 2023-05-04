@@ -18,6 +18,8 @@ const AverageData = ({ hourly = true }) => {
      */
     const getHourAverage = async () => {
       const data = await getHourlyAverage()
+      console.log(data)
+
       const averages = Object.keys(data).map(key => {
         return {
           datetime: key,
