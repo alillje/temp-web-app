@@ -35,8 +35,9 @@ const AverageData = ({ hourly = true }) => {
      * Gets the daily average.
      */
     const getDayAverage = async () => {
+      setLoading(true)
+
       const data = await getDailyAverage()
-      console.log(data)
       const averages = Object.keys(data).map(key => {
         return {
           datetime: key,
@@ -45,10 +46,9 @@ const AverageData = ({ hourly = true }) => {
         }
       })
       setPeriodAverage(averages)
+      setLoading(false)
     }
-    setLoading(true)
     hourly ? getHourAverage() : getDayAverage()
-    setLoading(false)
   }, [])
 
   useEffect(() => {

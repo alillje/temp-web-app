@@ -18,20 +18,20 @@ const CurrentTemp = () => {
      * Gets the document count.
      */
     const getTempData = async () => {
+      setLoading(true)
       const data = await getLatestTempdata()
       setTemp(data?.temperature)
       setHumidity(data?.humidity)
       const datetime = dayjs(data?.timestamp)
       const formattedDatetime = datetime.format('MMMM D, YYYY, HH:mm')
       setDateTime(formattedDatetime)
+      setLoading(false)
     }
-    setLoading(true)
     getTempData()
-    setLoading(false)
   }, [])
 
   useEffect(() => {
-  }, [temp])
+  }, [temp, humidity])
 
   if (loading) {
     return <LoadingSpinner />
