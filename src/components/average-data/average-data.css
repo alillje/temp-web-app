@@ -11,8 +11,10 @@
 
 .hour-average-container h1 {
   padding: 0px 30px 0px 30px;
+  width: 100%;
+  margin-bottom: 30px;
   text-align: center;
-  font-size: 2rem;
+  font-size: 1.8rem;
   line-height: 40px;
   font-weight: 200;
   color: #878787;

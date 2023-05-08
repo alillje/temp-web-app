@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react'
 import { getHourlyAverage, getDailyAverage } from '../../services/fetch-service'
-import dayjs from 'dayjs'
 import AverageItem from '../average-item/average-item.js'
 import './average-data.css'
 import LoadingSpinner from '../loading-spinner/loading-spinner'
@@ -46,8 +45,6 @@ const AverageData = ({ hourly = true }) => {
         }
       })
       setPeriodAverage(averages)
-      //   const datetime = dayjs(data?.timestamp)
-      //   const formattedDatetime = datetime.format('MMMM D, YYYY, HH:mm')
     }
     setLoading(true)
     hourly ? getHourAverage() : getDayAverage()
@@ -59,7 +56,7 @@ const AverageData = ({ hourly = true }) => {
 
   return (
     <div className="hour-average-container">
-      {hourly ? <h1>Last 24 hours average</h1> : <h1>Last 10 days average</h1>}
+      {hourly ? <h1>Last 24 hour average</h1> : <h1>Last 10 day average</h1>}
       {loading && <LoadingSpinner />}
       {!loading && <div className="hour-average-list">
         {periodAverage.map((tempItem) => {

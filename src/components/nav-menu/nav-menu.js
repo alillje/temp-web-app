@@ -1,6 +1,5 @@
-import { useSelector, useDispatch } from 'react-redux'
-import { useNavigate, useLocation } from 'react-router-dom'
-
+import { useDispatch } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
 import { toggleMenu } from '../../redux/reducers/menu.js'
 import { useEffect } from 'react'
 import CloseButton from './img/CloseButton.svg'
@@ -12,7 +11,6 @@ import './nav-menu.css'
 const NavMenu = () => {
   const dispatch = useDispatch()
   const navigate = useNavigate()
-  // const showMenu = useSelector((state) => state.menu.show)
 
   useEffect(() => {
   }, [])
@@ -28,10 +26,14 @@ const NavMenu = () => {
     )
   }
 
+  /**
+   * Navigatets to the given path.
+   */
   const goToPath = (path = '/') => {
     closeSidebar()
     navigate(path)
   }
+
   return (
 <div className="nav-menu-container">
   <div className="nav-menu-close-container"><img onClick={closeSidebar} src={CloseButton}></img></div>

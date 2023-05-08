@@ -29,7 +29,8 @@
     font-family: Poppins-Regular;
     color: #c2c2c2b7;
     position: fixed;
-    pointer-events: all;;
+    pointer-events: all;
+    cursor: pointer;
   }
 
   .layout-title {
