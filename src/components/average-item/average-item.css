@@ -10,3 +10,17 @@
     padding: 10px 0px 10px 0px;
     color: #c9c9c9;
 }
+.itemTime {
+    width: 40%;
+}
+.avgItemData {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 52%;
+    justify-content: space-between;;
+}
+
+.itemHum {
+    color: #c1c1c15b;
+}

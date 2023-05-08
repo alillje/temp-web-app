@@ -60,7 +60,7 @@ const AverageData = ({ hourly = true }) => {
       {loading && <LoadingSpinner />}
       {!loading && <div className="hour-average-list">
         {periodAverage.map((tempItem) => {
-          return <AverageItem temperature={tempItem.temperature} datetime={tempItem.datetime} key={tempItem?.timestamp} hour={hourly} />
+          return <AverageItem temperature={tempItem.temperature} datetime={tempItem.datetime} humidity={tempItem.humidity} key={tempItem?.timestamp} hour={hourly} />
         })}
       </div>}
     </div>

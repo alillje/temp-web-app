@@ -31,7 +31,9 @@ const Layout = ({ main, bottom }) => {
       })
     )
   }
-  useEffect(() => {}, [showMenu])
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [showMenu])
 
   /**
    * Navigatets to the given path.
