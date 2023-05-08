@@ -7,7 +7,8 @@ import './average-item.css'
 const AverageItem = ({ temperature = 23.3, humidity = 10, datetime = '2023-05-02T19:00:00Z', hour = true }) => {
   // Subtract 2 hours to account for timzeone difference
   // const time = dayjs(datetime).subtract(2, 'hour')
-  const time = dayjs(datetime)
+  // const time = dayjs(datetime)
+  const time = dayjs(datetime).add(1, 'hour')
 
   return (
     <div className="hour-average-item">
