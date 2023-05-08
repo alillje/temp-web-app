@@ -14,8 +14,8 @@ const AverageItem = ({ temperature = 23.3, humidity = 10, datetime = '2023-05-02
     <div className="hour-average-item">
       <div className="itemTime">{hour ? time.format('HH:mm') : time.format('dddd')}</div>
       <div className="avgItemData">
-      <div className="itemHum">{Math.round(humidity)}%</div>
-      <div className="itemTemp">{Math.round(temperature * 10) / 10}°c</div>
+      <div className="itemHum">{humidity > 0 ? `${Math.round(humidity)}%` : 'N/A'}</div>
+      <div className="itemTemp">{temperature > 0 ? `${Math.round(temperature * 10) / 10}°c` : 'N/A'}</div>
       </div>
     </div>
   )
