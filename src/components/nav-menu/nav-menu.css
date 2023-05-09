@@ -7,8 +7,8 @@
   gap: 50px;
   background-color: inherit;
   display: grid;
-  grid-template-columns:repeat(6, 1fr);
-  grid-template-rows: repeat(10, 1fr);
+  grid-template-columns: 100px repeat(4, 1fr) 100px;
+  grid-template-rows:  110px repeat(9, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   justify-content: center;
