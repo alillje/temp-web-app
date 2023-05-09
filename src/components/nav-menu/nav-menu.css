@@ -7,7 +7,7 @@
   gap: 50px;
   background-color: inherit;
   display: grid;
-  grid-template-columns: 100px repeat(4, 1fr) 100px;
+  grid-template-columns: 140px repeat(4, 1fr) 140px;
   grid-template-rows:  110px 0.5fr repeat(8, 1fr);
   grid-column-gap: 0px;
   grid-row-gap: 0px;
@@ -21,7 +21,7 @@
 }
 
 .nav-menu-close-container img {
-  width: 65%;
+  width: 50%;
 }
 
 .nav-item-list {
