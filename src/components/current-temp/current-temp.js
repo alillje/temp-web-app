@@ -23,7 +23,7 @@ const CurrentTemp = () => {
       setTemp(data?.temperature)
       setHumidity(data?.humidity)
       const datetime = dayjs(data?.timestamp)
-      const formattedDatetime = datetime.format('MMMM D, YYYY, HH:mm')
+      const formattedDatetime = datetime.format('MMMM D, YYYY, HH:mm:ss')
       setDateTime(formattedDatetime)
       setLoading(false)
     }

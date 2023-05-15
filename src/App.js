@@ -12,8 +12,8 @@ function App () {
     <BrowserRouter>
       <Routes>
         <Route path='/' element={<Layout main={<CurrentTemp />} />} />
-        <Route path='/hour-average' element={<Layout main={<AverageData hourly={true} />} />} />
-        <Route path='/day-average' element={<Layout main={<AverageData hourly={false} />} />} />
+        {/* <Route path='/hour-average' element={<Layout main={<AverageData hourly={true} />} />} />
+        <Route path='/day-average' element={<Layout main={<AverageData hourly={false} />} />} /> */}
       </Routes>
   </BrowserRouter>)
 }

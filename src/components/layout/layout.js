@@ -48,7 +48,7 @@ const Layout = ({ main, bottom }) => {
     return (
      <div className="layoutContainer">
                 <div className="layoutTop" onClick={() => goToPath('/')}><div className="layout-title">Jaktstigen 6</div>
-                <div className="layout-menu-button-container"><img onClick={ShowMenu} src={MenuIcon} alt="MenuIcon" className="menuIcon"></img></div>
+                {/* <div className="layout-menu-button-container"><img onClick={ShowMenu} src={MenuIcon} alt="MenuIcon" className="menuIcon"></img></div> */}
                 </div>
                 <div className="layoutMain" >
                 {main}
