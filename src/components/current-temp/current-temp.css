@@ -8,6 +8,15 @@
 
 }
 
+.current-temp-error {
+    text-align: center;
+    padding: 200px 30px 0px 30px;
+    font-size: 1.1rem;
+    line-height: 20px;
+    font-weight: 200;
+    color: #878787;
+}
+
 
 .current-temp-container h1 {
     padding: 0px 30px 0px 30px;

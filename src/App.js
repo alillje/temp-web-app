@@ -2,7 +2,6 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './App.css'
 import Layout from './components/layout/layout.js'
 import CurrentTemp from './components/current-temp/current-temp.js'
-import AverageData from './components/average-data/average-data.js'
 
 /**
  * Application starting point.
