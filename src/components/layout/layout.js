@@ -47,7 +47,7 @@ const Layout = ({ main, bottom }) => {
   } else {
     return (
      <div className="layoutContainer">
-                <div className="layoutTop" onClick={() => goToPath('/')}><div className="layout-title">Jaktstigen 6</div>
+                <div className="layoutTop" onClick={() => goToPath('/')}><div className="layout-title">Ragnar Vikings Väg 10</div>
                 {/* <div className="layout-menu-button-container"><img onClick={ShowMenu} src={MenuIcon} alt="MenuIcon" className="menuIcon"></img></div> */}
                 </div>
                 <div className="layoutMain" >
